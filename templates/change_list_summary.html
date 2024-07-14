@@ -1,0 +1,25 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+{{ block.super }}
+
+{% if summary %}
+    <div class="summary-section">
+        <h2>Jami To'lovlar</h2>
+        <table>
+            <tr>
+                <th>Jami Kirim (UZS)</th>
+                <th>Jami Chiqim (UZS)</th>
+                <th>Jami Kirim (USD)</th>
+                <th>Jami Chiqim (USD)</th>
+            </tr>
+            <tr>
+                <td>{{ summary.total_amount_in_uzs }}</td>
+                <td>{{ summary.total_amount_out_uzs }}</td>
+                <td>{{ summary.total_amount_in_usd }}</td>
+                <td>{{ summary.total_amount_out_usd }}</td>
+            </tr>
+        </table>
+    </div>
+{% endif %}
+{% endblock %}
