@@ -15,7 +15,7 @@ class DeveloperAdmin(admin.ModelAdmin):
 
 @admin.register(Payment)
 class PaymentAdmin(admin.ModelAdmin):
-    list_display = ('comment', 'owner', 'client', 'dev', 'type', 'date', 'amount_in_uzs', 'amount_in_usd', 'amount_out_uzs', 'amount_out_usd')
+    list_display = ('comment', 'date', 'owner', 'client', 'dev', 'type', 'amount_in_uzs', 'amount_in_usd', 'amount_out_uzs', 'amount_out_usd')
     list_filter = ('date', 'owner', 'dev', 'client')
     date_hierarchy = 'date'
     search_fields = ('comment',)
