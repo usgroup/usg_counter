@@ -5,6 +5,10 @@ from .models import *
 class OwnerAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
 @admin.register(Developer)
 class DeveloperAdmin(admin.ModelAdmin):
     list_display = ('name',)
