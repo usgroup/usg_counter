@@ -55,5 +55,6 @@ class Payment(models.Model):
         return self.comment
     
     class Meta:
+        ordering = ['-date']
         verbose_name = "To'lov"
         verbose_name_plural = "To'lovlar"
